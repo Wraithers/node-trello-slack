@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/atuttle/node-trello-slack",
   "dependencies": {
-    "node-slack": "^0.0.5",
+    "slack-node": "^0.1.0",
     "redis": "^0.12.1",
     "url": "^0.10.1",
     "trello-events": "^0.1.6"
