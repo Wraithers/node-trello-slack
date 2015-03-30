@@ -1,8 +1,5 @@
 # node-trello-slack
 
-[![wercker status](https://app.wercker.com/status/c5b1d402d7139b17ed6b34ce74a29b3e/s/master "wercker status")](https://app.wercker.com/project/bykey/c5b1d402d7139b17ed6b34ce74a29b3e)
-<br/>[![Dependency Status](https://david-dm.org/atuttle/node-trello-slack.svg?style=flat)](https://david-dm.org/atuttle/node-trello-slack)
-
 The built-in integration for Trello provided by Slack/SlackHQ isn't enough. It's limited to one board!
 
 This tool will check the trello api once a minute for updates and push them into your desired channels. You can configure any number of boards.
@@ -59,17 +56,19 @@ If you want to send alerts from each board to a different Slack channel, pass ob
 }
 ```
 
+Alternatively, use the ``index.js`` file already present
+
 ## Getting your Trello and Slack credentials
 
 You'll need a **Trello key and token.** [Get your key here](https://trello.com/1/appKey/generate): it's the one in the box near the top labeled "key." Once you have that key, substitute it into the following url for <KEY-HERE> and open it up in a browser tab:
 
     https://trello.com/1/connect?name=node-trello-slack&response_type=token&expiration=never&key=<KEY-HERE>
 
-You'll also need your webhook **token and domain** for Slack. The domain is just the part of the url before `.slack.com`. To get your token, go to the following url (substituting your domain for `<YOUR-DOMAIN>`) and add the webhook integration (if it's not already enabled). The token will be listed in the left sidebar.
+You'll also need your webhook url for Slack. The domain is just the part of the url before `.slack.com`. To get your webhook url, go to the following url (substituting your domain for `<YOUR-DOMAIN>`) and add the webhook integration (if it's not already enabled). The url will appear after the integration is added.
 
     https://<YOUR-DOMAIN>.slack.com/services/new/incoming-webhook
 
-Fill all four of these values into your bot config, and tweak the other options
+Fill all three of these values into the ``index.js`` file, and tweak the other options
 
 ## Running...
 
