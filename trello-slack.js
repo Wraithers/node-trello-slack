@@ -4,9 +4,7 @@ var fs = require('fs'),
 	Trello = require('trello-events'),
 	Slack = require('slack-node');
 
-webhookUri = "https://hooks.slack.com/services/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";
-
-var cfg, trello, slack, redis, handlers;
+var cfg, trello, slack, redis, handlers, webhookUri;
 var mechanism = 'file';
 
 module.exports = function (config) {
@@ -40,7 +38,7 @@ module.exports = function (config) {
 	}
 
 	bootstrap(function (prev) {
-		webhookUri = "https://hooks.slack.com/services/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";
+		webhookUri = cfg.slack.webhook;
 		cfg.minId = prev;
 		slack = new Slack();
 		slack.setWebHook(webhookUri);
