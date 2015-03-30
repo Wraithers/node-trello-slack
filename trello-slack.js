@@ -10,6 +10,8 @@ var mechanism = 'file';
 module.exports = function (config) {
 	this.config = cfg = config;
 
+	webhookUri = cfg.slack.webhook;
+
 	cfg.trello.boardChannels = {};
 	for (var i = 0; i < cfg.trello.boards.length; i++) {
 		switch (typeof cfg.trello.boards[i]) {
@@ -38,10 +40,9 @@ module.exports = function (config) {
 	}
 
 	bootstrap(function (prev) {
-		webhookUri = cfg.slack.webhook;
 		cfg.minId = prev;
 		slack = new Slack();
-		slack.setWebHook(webhookUri);
+		slack.setWebhook(webhookUri);
 		trello = new Trello(cfg);
 
 		trello
