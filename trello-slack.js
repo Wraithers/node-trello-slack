@@ -213,8 +213,4 @@ function writePrevId(valu) {
 			}
 		});
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 7d380630c7a1cfb1c6bc70a50fcead846782fc8d
