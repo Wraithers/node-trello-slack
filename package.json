@@ -1,6 +1,6 @@
 {
-	"name": "n-trello-slack",
-	"version": "0.0.1",
+	"name": "node-trello-slack-ak",
+	"version": "0.0.2",
 	"description": "Monitors a collection of Trello boards and pushes their activity into SlackHQ",
 	"main": "trello-slack.js",
 	"scripts": {
@@ -27,7 +27,7 @@
 	},
 	"homepage": "https://github.com/Wraithers/node-trello-slack",
 	"dependencies": {
-		"n-trello-slack": "^0.0.1",
+		"n-trello-slack": "^0.0.2",
 		"slack-node": "^0.1.0",
 		"redis": "^0.12.1",
 		"url": "^0.10.1",
