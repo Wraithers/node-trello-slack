@@ -1,7 +1,6 @@
 {
-<<<<<<< HEAD
-	"name": "node-trello-slack-ak",
-	"version": "0.0.2",
+	"name": "n-trello-slack",
+	"version": "0.0.3",
 	"description": "Monitors a collection of Trello boards and pushes their activity into SlackHQ",
 	"main": "trello-slack.js",
 	"scripts": {
@@ -9,23 +8,12 @@
 		"test": "mocha test/*.js"
 	},
 	"keywords": [
-=======
-  "name": "node-trello-slack",
-  "version": "0.5.0",
-  "description": "Monitors a collection of Trello boards and pushes their activity into SlackHQ",
-  "main": "trello-slack.js",
-  "scripts": {
-    "test": "mocha test/*.js"
-  },
-  "keywords": [
->>>>>>> 21aa611c3a4780d75456d7a6210cffc875ee1a4c
     "trello",
     "slack",
     "slackhq",
     "webhook",
     "integration"
   ],
-<<<<<<< HEAD
 	"author": {
 		"name": "Aaron K"
 	},
@@ -39,7 +27,6 @@
 	},
 	"homepage": "https://github.com/Wraithers/node-trello-slack",
 	"dependencies": {
-		"n-trello-slack": "^0.0.3",
 		"slack-node": "^0.1.0",
 		"redis": "^0.12.1",
 		"url": "^0.10.1",
@@ -57,26 +44,3 @@
 	"_shasum": "0efaee67de2749347c1ee1ee43a5b2e839273719",
 	"_resolved": "file:..\\node-trello-slack-ak"
 }
-=======
-  "author": "Adam Tuttle",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/atuttle/node-trello-slack.git"
-  },
-  "bugs": {
-    "url": "https://github.com/atuttle/node-trello-slack/issues"
-  },
-  "homepage": "https://github.com/atuttle/node-trello-slack",
-  "dependencies": {
-    "slack-node": "^0.1.0",
-    "redis": "^0.12.1",
-    "url": "^0.10.1",
-    "trello-events": "^0.1.6"
-  },
-  "devDependencies": {
-    "mocha": "^1.18.2",
-    "chai": "^1.9.1"
-  }
-}
->>>>>>> 21aa611c3a4780d75456d7a6210cffc875ee1a4c
