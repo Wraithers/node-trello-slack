@@ -2,7 +2,7 @@
 
 var Bot = require('n-trello-slack'),
 	bot = new Bot({
-		pollFrequency: 1000 * 60 * 3 //every 3 minutes
+		pollFrequency: 1000 * 60 //every minute
 			,
 		start: true,
 		trello: {
