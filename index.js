@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var Bot = require('n-trello-slack'),
+var Bot = require('./trello-slack.js'),
 	bot = new Bot({
 		pollFrequency: 1000 * 60 //every minute
 			,
