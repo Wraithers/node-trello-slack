@@ -18,6 +18,10 @@ var Bot = require('n-trello-slack'),
 				{
 					id: 'yMItwCDu',
 					channel: '#jr-social'
+				},
+				{
+					id: 'eBUjTy1m',
+					channel: '#vh-social'
 				}
     		],
 			key: 'b97f22ec035a407a41b24eb6a9c14f08',
