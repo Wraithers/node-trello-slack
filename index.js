@@ -5,10 +5,6 @@ var config = require('config-heroku');
 var envVariable = process.env.HEROKU_CONFIG;
 var parsedVariable = JSON.parse(envVariable);
 
-if (parsedVariable.hasOwnProperty('id4')) {
-	console.log(parsedVariable.id4);
-}
-
 var Bot = require('n-trello-slack'),
 	bot = new Bot({
 		pollFrequency: 1000 * 60, //every minute
@@ -34,6 +30,70 @@ var Bot = require('n-trello-slack'),
 				{
 					id: parsedVariable.id5,
 					channel: parsedVariable.channel5
+				},
+				{
+					id: parsedVariable.id6,
+					channel: parsedVariable.channel6
+				},
+				{
+					id: parsedVariable.id7,
+					channel: parsedVariable.channel7
+				},
+				{
+					id: parsedVariable.id7,
+					channel: parsedVariable.channel7
+				},
+				{
+					id: parsedVariable.id8,
+					channel: parsedVariable.channel8
+				},
+				{
+					id: parsedVariable.id9,
+					channel: parsedVariable.channel9
+				},
+				{
+					id: parsedVariable.id10,
+					channel: parsedVariable.channel20
+				},
+				{
+					id: parsedVariable.id11,
+					channel: parsedVariable.channel11
+				},
+				{
+					id: parsedVariable.id12,
+					channel: parsedVariable.channel12
+				},
+				{
+					id: parsedVariable.id13,
+					channel: parsedVariable.channel13
+				},
+				{
+					id: parsedVariable.id14,
+					channel: parsedVariable.channel14
+				},
+				{
+					id: parsedVariable.id15,
+					channel: parsedVariable.channel15
+				},
+				{
+					id: parsedVariable.id16,
+					channel: parsedVariable.channel16
+				},
+				{
+					id: parsedVariable.id17,
+					channel: parsedVariable.channel17
+				},
+				{
+					id: parsedVariable.id18,
+					channel: parsedVariable.channel18
+				},
+				{
+					id: parsedVariable.id19,
+					channel: parsedVariable.channel19
+				},
+				{
+					id: parsedVariable.id20,
+					channel: parsedVariable.channel20
 				}
     		],
 			key: 'b97f22ec035a407a41b24eb6a9c14f08',
