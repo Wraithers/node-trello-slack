@@ -1,5 +1,13 @@
 #!/usr/bin/env node
 
+var config = require('config-heroku');
+
+var boardConfig = config.get('boardLinks');
+console.log(boardConfig);
+console.log(process.ENV.HEROKU_CONFIG);
+console.log(process.ENV.HEROKU_CONFIG.id1);
+console.log(process.ENV.HEROKU_CONFIG.channel1);
+
 var Bot = require('n-trello-slack'),
 	bot = new Bot({
 		pollFrequency: 1000 * 60 //every minute
