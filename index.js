@@ -2,7 +2,7 @@
 
 var config = require('config-heroku');
 
-var test1 = process.env.HEROKU_CONFIG.boardLinks;
+var test1 = ENV['HEROKU_CONFIG.boardLinks'];
 
 console.log(test1);
 
