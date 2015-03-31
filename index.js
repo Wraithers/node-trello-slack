@@ -9,7 +9,7 @@ console.log(test1);
 var test2 = JSON.parse(test1);
 console.log(typeof (test2));
 
-var test3 = test2.boardLinks[0].id1;
+var test3 = test2.id1;
 console.log(test3);
 
 var Bot = require('n-trello-slack'),
