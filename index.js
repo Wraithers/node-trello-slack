@@ -4,7 +4,7 @@ var config = require('config-heroku');
 
 var test1 = process.env.HEROKU_CONFIG;
 
-console.log(test1.boardLinks.id1);
+console.log(test1);
 
 //console.log(process.env.HEROKU_CONFIG.boardLinks.id1);
 //console.log(process.env.HEROKU_CONFIG.boardLinks.channel1);
