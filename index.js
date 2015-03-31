@@ -5,7 +5,7 @@ var config = require('config-heroku');
 var envVariable = process.env.HEROKU_CONFIG;
 var parsedVariable = JSON.parse(envVariable);
 
-if (parsedVariable.has(id4)) {
+if (parsedVariable.hasOwnProperty('id4')) {
 	console.log(parsedVariable.id4);
 }
 
