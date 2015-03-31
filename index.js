@@ -5,7 +5,9 @@ var config = require('config-heroku');
 var envVariable = process.env.HEROKU_CONFIG;
 var parsedVariable = JSON.parse(envVariable);
 
-console.log(parsedVariable.id1);
+if (parsedVariable.has(id4)) {
+	console.log(parsedVariable.id4);
+}
 
 var Bot = require('n-trello-slack'),
 	bot = new Bot({
@@ -16,19 +18,19 @@ var Bot = require('n-trello-slack'),
 			boards: [
 				{
 					id: parsedVariable.id1,
-					channel: '#bnf'
+					channel: parsedVariable.channel1
         		},
 				{
-					id: 'lxviQlfu',
-					channel: '#jr-monthlytracker'
+					id: parsedVariable.id2,
+					channel: parsedVariable.channel2
         		},
 				{
-					id: 'yMItwCDu',
-					channel: '#jr-social'
+					id: parsedVariable.id3,
+					channel: parsedVariable.channel3
 				},
 				{
-					id: 'eBUjTy1m',
-					channel: '#vh-social'
+					id: parsedVariable.id4,
+					channel: parsedVariable.channel4
 				}
     		],
 			key: 'b97f22ec035a407a41b24eb6a9c14f08',
