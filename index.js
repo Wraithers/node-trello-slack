@@ -2,15 +2,10 @@
 
 var config = require('config-heroku');
 
-var test1 = process.env.HEROKU_CONFIG;
+var envVariable = process.env.HEROKU_CONFIG;
+var parsedVariable = JSON.parse(envVariable);
 
-console.log(test1);
-
-var test2 = JSON.parse(test1);
-console.log(typeof (test2));
-
-var test3 = test2.id1;
-console.log(test3);
+console.log(parsedVariable.id1);
 
 var Bot = require('n-trello-slack'),
 	bot = new Bot({
@@ -20,7 +15,7 @@ var Bot = require('n-trello-slack'),
 		trello: {
 			boards: [
 				{
-					id: '7lo9Rm73',
+					id: parsedVariable.id1,
 					channel: '#bnf'
         		},
 				{
