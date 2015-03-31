@@ -4,11 +4,12 @@ var config = require('config-heroku');
 
 var test1 = process.env.HEROKU_CONFIG;
 
+console.log(typeof (test1));
 console.log(test1);
-console.log(test1.boardLinks[0].id1);
 
-//console.log(process.env.HEROKU_CONFIG.boardLinks.id1);
-//console.log(process.env.HEROKU_CONFIG.boardLinks.channel1);
+var test2 = test1.boardLinks[0].id1;
+
+console.log(test2);
 
 var Bot = require('n-trello-slack'),
 	bot = new Bot({
