@@ -5,20 +5,19 @@ var config = require('config-heroku');
 var envVariable = process.env.HEROKU_CONFIG;
 var parsedVariable = JSON.parse(envVariable);
 
-if (parsedVariable.hasOwnProperty('id4')) {
-	console.log(parsedVariable.id4);
-}
-
 var Bot = require('n-trello-slack'),
 	bot = new Bot({
-		pollFrequency: 1000 * 60 //every minute
-			,
+		pollFrequency: 1000 * 60, //every minute
 		start: true,
 		trello: {
 			boards: [
 				{
-					id: parsedVariable.id1,
-					channel: parsedVariable.channel1
+					id: if (parsedVariable.hasOwnProperty('id1')) {
+						return parsedVariable.id1
+					},
+					channel: if (parsedVariable.hasOwnProperty('channel1')) {
+						return parsedVariable.channel1
+					}
         		},
 				{
 					id: parsedVariable.id2,
