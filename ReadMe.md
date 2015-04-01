@@ -3,7 +3,7 @@
 Based heavily off of [node-trello-slack](https://www.npmjs.com/package/node-trello-slack), with 2 extra features added including:
 
 - tracking member adding to cards
-- board ids, channel names, trello key+token and slack webhook in environment variables via ``config-heroku``
+- board ids, channel names, trello key+token and slack webhook in environment variables via `config-heroku`
 
 The built-in integration for Trello provided by Slack/SlackHQ isn't enough. It's limited to one board!
 
@@ -11,15 +11,15 @@ This tool will check the Trello api once a minute for updates and push them into
 
 ### Install
 
-	``git clone https://github.com/Wraithers/node-trello-slack``
+	`git clone https://github.com/Wraithers/node-trello-slack`
 
 ### Usage
 
-- The ``index.js`` file present is preconfigured for up to 20 boards, add more as needed following the naming conventions
-- Do ``npm install -g config-heroku`` to store ids, channels, trello key+token and slack webhook in Heroku environment variables
-- Add all your secure info to the ``heroku.json`` file in ``config/``
-- Once all secure info is added, do ``config-heroku save`` which will show you all the info being saved in the environment variable ``HEROKU_CONFIG`` before interactively saving
-- For more info on ``config-heroku`` check out [the npm package](https://www.npmjs.com/package/config-heroku)
+- The `index.js` file present is preconfigured for up to 20 boards, add more as needed following the naming conventions
+- Do `npm install -g config-heroku` to store ids, channels, trello key+token and slack webhook in Heroku environment variables
+- Add all your secure info to the `heroku.json` file in `config/`
+- Once all secure info is added, do `config-heroku save` which will show you all the info being saved in the environment variable `HEROKU_CONFIG` before interactively saving
+- For more info on `config-heroku` check out [the npm package](https://www.npmjs.com/package/config-heroku)
 
 ## Getting your Trello and Slack credentials
 
@@ -31,7 +31,7 @@ You'll also need your **webhook url for Slack**. The domain is just the part of 
 
     `https://<YOUR-DOMAIN>.slack.com/services/new/incoming-webhook`
 
-Fill all three of these values in the ``config/heroku.json`` file along with the board ids & slack channels you want connected
+Fill all three of these values in the `config/heroku.json` file along with the board ids & slack channels you want connected
 
 ## Running...
 
