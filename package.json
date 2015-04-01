@@ -28,7 +28,7 @@
 	"homepage": "https://github.com/Wraithers/node-trello-slack",
 	"dependencies": {
 		"config-heroku": "^0.1.1-a",
-		"n-trello-slack": "^0.0.4",
+		"n-trello-slack": "^0.0.5",
 		"redis": "^0.12.1",
 		"slack-node": "^0.1.0",
 		"trello-events": "^0.1.6",
