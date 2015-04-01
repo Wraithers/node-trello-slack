@@ -11,7 +11,7 @@ This tool will check the Trello api once a minute for updates and push them into
 
 ### Install
 
-	`git clone https://github.com/Wraithers/node-trello-slack`
+	git clone https://github.com/Wraithers/node-trello-slack
 
 ### Usage
 
@@ -25,11 +25,11 @@ This tool will check the Trello api once a minute for updates and push them into
 
 You'll need a **Trello key and token.** [Get your key here](https://trello.com/1/appKey/generate). It's the one in the box near the top labeled "key." Once you have that key, substitute it into the following url for `<KEY-HERE>` and open it up in a browser tab:
 
-    `https://trello.com/1/connect?name=node-trello-slack&response_type=token&expiration=never&key=<KEY-HERE>`
+    https://trello.com/1/connect?name=node-trello-slack&response_type=token&expiration=never&key=<KEY-HERE>
 
 You'll also need your **webhook url for Slack**. The domain is just the part of the url before `.slack.com`. To get your webhook url, go to the following url (substituting your domain for `<YOUR-DOMAIN>`) and add the webhook integration (if it's not already enabled). The url will appear after the integration is added.
 
-    `https://<YOUR-DOMAIN>.slack.com/services/new/incoming-webhook`
+    https://<YOUR-DOMAIN>.slack.com/services/new/incoming-webhook
 
 Fill all three of these values in the `config/heroku.json` file along with the board ids & slack channels you want connected
 
