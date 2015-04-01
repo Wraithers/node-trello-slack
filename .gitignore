@@ -1,4 +1,4 @@
 index.js.bak
 node_modules/*
-config/
+config/*.bak
 .env

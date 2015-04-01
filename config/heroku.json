@@ -1,0 +1,15 @@
+{
+	"id1": "trello-board-id-1",
+	"channel1": "#slack-channel-1",
+	"id2": "trello-board-id-2",
+	"channel2": "#slack-channel-2",
+	"id3": "trello-board-id-3",
+	"channel3": "#slack-channel-3",
+	"id4": "trello-board-id-4",
+	"channel4": "#slack-channel-4",
+	"id5": "trello-board-id-5",
+	"channel5": "#slack-channel-5",
+	"trelloKey": "trello-key",
+	"trelloToken": "trello-token",
+	"slackWebhook": "slack-webhook-url"
+}

@@ -1,75 +1,37 @@
 # node-trello-slack
 
-[![wercker status](https://app.wercker.com/status/c5b1d402d7139b17ed6b34ce74a29b3e/s/master "wercker status")](https://app.wercker.com/project/bykey/c5b1d402d7139b17ed6b34ce74a29b3e)
-<br/>[![Dependency Status](https://david-dm.org/atuttle/node-trello-slack.svg?style=flat)](https://david-dm.org/atuttle/node-trello-slack)
+Based heavily off of [node-trello-slack](https://www.npmjs.com/package/node-trello-slack), with 2 extra features added including:
+
+- tracking member adding to cards
+- board ids, channel names, trello key+token and slack webhook in environment variables via ``config-heroku``
 
 The built-in integration for Trello provided by Slack/SlackHQ isn't enough. It's limited to one board!
 
-This tool will check the trello api once a minute for updates and push them into your desired channels. You can configure any number of boards.
+This tool will check the Trello api once a minute for updates and push them into your desired channels. You can configure any number of boards.
 
 ### Install
 
-	npm install --save node-trello-slack
+	``git clone https://github.com/Wraithers/node-trello-slack``
 
 ### Usage
 
-Create an executable script with the following code:
-
-```js
-#!/usr/bin/env node
-
-var Bot = require('node-trello-slack')
-	,bot = new Bot({
-		pollFrequency: 1000*60*3 //every 3 minutes
-		,start: true
-		,trello: {
-			boards: ['Nz5nyqZg','...']
-			,key: 'trello-key-here'
-			,token: 'trello-token-here'
-			,events: ['createCard','commentCard','addAttachmentToCard','updateCard','updateCheckItemStateOnCard']
-		}
-		,slack: {
-			domain: 'slack-domain-here'
-			,token: 'slack-webhook-token-here'
-			,channel: '#general'
-		}
-	});
-```
-
-You may completely omit `trello.events`, which indicates that you want all (recognized) events announced. All recognized events are listed in the example above. Alternately, include some subset of the list shown above. (Case sensitive)
-
-### Trello-board-specific channels
-
-If you want to send alerts from each board to a different Slack channel, pass object hashes instead of string board id's in the `trello.boards` array, as you see here:
-
-```js
-,trello: {
-	boards: [
-		{
-			id: 'Nz5nyqZg'
-			,channel: '#general'
-		}
-		,{
-			id: '...'
-			,channel: '#devops'
-		}
-	]
-	,key: 'trello-key-here'
-	,token: 'trello-token-here'
-}
-```
+- The ``index.js`` file present is preconfigured for up to 20 boards, add more as needed following the naming conventions
+- Do ``npm install -g config-heroku`` to store ids, channels, trello key+token and slack webhook in Heroku environment variables
+- Add all your secure info to the ``heroku.json`` file in ``config/``
+- Once all secure info is added, do ``config-heroku save`` which will show you all the info being saved in the environment variable ``HEROKU_CONFIG`` before interactively saving
+- For more info on ``config-heroku`` check out [the npm package](https://www.npmjs.com/package/config-heroku)
 
 ## Getting your Trello and Slack credentials
 
-You'll need a **Trello key and token.** [Get your key here](https://trello.com/1/appKey/generate): it's the one in the box near the top labeled "key." Once you have that key, substitute it into the following url for <KEY-HERE> and open it up in a browser tab:
+You'll need a **Trello key and token.** [Get your key here](https://trello.com/1/appKey/generate). It's the one in the box near the top labeled "key." Once you have that key, substitute it into the following url for `<KEY-HERE>` and open it up in a browser tab:
 
-    https://trello.com/1/connect?name=node-trello-slack&response_type=token&expiration=never&key=<KEY-HERE>
+    `https://trello.com/1/connect?name=node-trello-slack&response_type=token&expiration=never&key=<KEY-HERE>`
 
-You'll also need your webhook **token and domain** for Slack. The domain is just the part of the url before `.slack.com`. To get your token, go to the following url (substituting your domain for `<YOUR-DOMAIN>`) and add the webhook integration (if it's not already enabled). The token will be listed in the left sidebar.
+You'll also need your **webhook url for Slack**. The domain is just the part of the url before `.slack.com`. To get your webhook url, go to the following url (substituting your domain for `<YOUR-DOMAIN>`) and add the webhook integration (if it's not already enabled). The url will appear after the integration is added.
 
-    https://<YOUR-DOMAIN>.slack.com/services/new/incoming-webhook
+    `https://<YOUR-DOMAIN>.slack.com/services/new/incoming-webhook`
 
-Fill all four of these values into your bot config, and tweak the other options
+Fill all three of these values in the ``config/heroku.json`` file along with the board ids & slack channels you want connected
 
 ## Running...
 
@@ -94,7 +56,7 @@ Enjoy!
 
 # The MIT License (MIT)
 
-> Copyright (c) 2014 Adam Tuttle
+> Copyright (c) 2015 Aaron Khare
 
 > Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
